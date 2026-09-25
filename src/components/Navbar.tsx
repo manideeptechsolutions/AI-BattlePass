@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { WhatsAppIcon, InstagramIcon } from './SocialIcons';
 
 const ENROLL_URL = import.meta.env.VITE_LMS_ENROLL_URL || '#pricing';
 
@@ -75,8 +76,30 @@ export const Navbar: React.FC = () => {
             ))}
           </nav>
 
-          {/* Right CTA Button */}
-          <div className="hidden sm:flex items-center gap-4">
+          {/* Right CTA Button & Social Connect */}
+          <div className="hidden sm:flex items-center gap-3">
+            <a
+              href="https://wa.me/919381088104?text=Hi%20Mani%2C%20I%20am%20interested%20in%20the%20AI%20Battlepass%20program!"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp 9381088104"
+              className="p-2 rounded-full bg-emerald-50 hover:bg-emerald-100 text-[#25D366] border border-emerald-200 transition-all hover:scale-105 shadow-sm"
+              title="Chat on WhatsApp: 9381088104"
+            >
+              <WhatsAppIcon className="w-4 h-4" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/manideeptechsolutions/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram @manideeptechsolutions"
+              className="p-2 rounded-full bg-pink-50 hover:bg-pink-100 text-[#E1306C] border border-pink-200 transition-all hover:scale-105 shadow-sm"
+              title="Follow on Instagram"
+            >
+              <InstagramIcon className="w-4 h-4" />
+            </a>
+
             <a
               href={ENROLL_URL}
               className="relative group overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
@@ -90,7 +113,16 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex lg:hidden items-center gap-3">
+          <div className="flex lg:hidden items-center gap-2">
+            <a
+              href="https://wa.me/919381088104?text=Hi%20Mani%2C%20I%20am%20interested%20in%20the%20AI%20Battlepass%20program!"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp 9381088104"
+              className="p-2 rounded-full bg-emerald-50 text-[#25D366] border border-emerald-200"
+            >
+              <WhatsAppIcon className="w-4 h-4" />
+            </a>
             <a
               href={ENROLL_URL}
               className="sm:hidden inline-flex items-center gap-1 text-xs font-bold bg-orange-500 hover:bg-orange-600 text-white px-3 py-1.5 rounded-full transition-colors shadow-sm"
@@ -129,7 +161,30 @@ export const Navbar: React.FC = () => {
                   {link.name}
                 </a>
               ))}
-              <div className="pt-2">
+              
+              {/* Quick Connect Mobile Links */}
+              <div className="grid grid-cols-2 gap-2 pt-2">
+                <a
+                  href="https://wa.me/919381088104?text=Hi%20Mani%2C%20I%20am%20interested%20in%20the%20AI%20Battlepass%20program!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold"
+                >
+                  <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
+                  <span>WhatsApp</span>
+                </a>
+                <a
+                  href="https://www.instagram.com/manideeptechsolutions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 p-2.5 rounded-xl bg-pink-50 border border-pink-200 text-pink-800 text-xs font-bold"
+                >
+                  <InstagramIcon className="w-4 h-4 text-[#E1306C]" />
+                  <span>Instagram</span>
+                </a>
+              </div>
+
+              <div className="pt-1">
                 <a
                   href={ENROLL_URL}
                   onClick={() => setMobileMenuOpen(false)}

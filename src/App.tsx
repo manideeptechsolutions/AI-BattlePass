@@ -18,12 +18,16 @@ import { Pricing } from './components/Pricing';
 import { FAQ } from './components/FAQ';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
+import { FloatingConnect } from './components/FloatingWhatsApp';
 
 export const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-orange-500 selection:text-white">
+    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-orange-500 selection:text-white relative">
       {/* Sticky Header Navbar */}
       <Navbar />
+
+      {/* Floating WhatsApp and Instagram Quick Connect */}
+      <FloatingConnect />
 
       {/* Main Page Flow Sections */}
       <main>

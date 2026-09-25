@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, User } from 'lucide-react';
+import { WhatsAppIcon, InstagramIcon } from './SocialIcons';
 
 export const Footer: React.FC = () => {
   return (
@@ -36,6 +37,29 @@ export const Footer: React.FC = () => {
             <p className="text-slate-600 text-xs leading-relaxed max-w-md font-medium">
               AI Battlepass is a comprehensive online training program by <strong>Mani DeepTech Solutions</strong> empowering developers, students, working professionals, and AI enthusiasts to build real-world AI applications.
             </p>
+
+            {/* Social Connect Badges */}
+            <div className="flex items-center gap-3 pt-1">
+              <a
+                href="https://wa.me/919381088104?text=Hi%20Mani%2C%20I%20am%20interested%20in%20the%20AI%20Battlepass%20program!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-xs font-bold transition-colors"
+              >
+                <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
+                <span>WhatsApp: 9381088104</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/manideeptechsolutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-pink-50 hover:bg-pink-100 text-pink-800 border border-pink-200 text-xs font-bold transition-colors"
+              >
+                <InstagramIcon className="w-4 h-4 text-[#E1306C]" />
+                <span>@manideeptechsolutions</span>
+              </a>
+            </div>
           </div>
 
           {/* Quick Navigation Links */}
@@ -54,7 +78,7 @@ export const Footer: React.FC = () => {
           {/* Direct Contact Info */}
           <div className="md:col-span-3 space-y-3">
             <h4 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider">Direct Contact</h4>
-            <div className="space-y-2 text-xs text-slate-600 font-medium">
+            <div className="space-y-2.5 text-xs text-slate-600 font-medium">
               <div className="flex items-center gap-2 text-slate-900 font-bold">
                 <User className="w-4 h-4 text-emerald-600" />
                 <span>Manideep Juvvala</span>
@@ -65,7 +89,30 @@ export const Footer: React.FC = () => {
                   9381088104
                 </a>
               </div>
-              <div className="pt-2 text-[11px] text-slate-500 font-semibold">
+
+              {/* Quick Action Links for WhatsApp and Instagram */}
+              <div className="pt-1 flex flex-col gap-2">
+                <a
+                  href="https://wa.me/919381088104?text=Hi%20Mani%2C%20I%20am%20interested%20in%20the%20AI%20Battlepass%20program!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-emerald-700 hover:text-emerald-800 font-bold transition-colors"
+                >
+                  <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
+                  <span>Chat on WhatsApp</span>
+                </a>
+                <a
+                  href="https://www.instagram.com/manideeptechsolutions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-pink-700 hover:text-pink-800 font-bold transition-colors"
+                >
+                  <InstagramIcon className="w-4 h-4 text-[#E1306C]" />
+                  <span>Follow on Instagram</span>
+                </a>
+              </div>
+
+              <div className="pt-1 text-[11px] text-slate-500 font-semibold">
                 Mode: Live Online Training
               </div>
             </div>

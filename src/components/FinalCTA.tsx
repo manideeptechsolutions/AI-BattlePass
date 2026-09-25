@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Phone, User, Sparkles, ShieldCheck } from 'lucide-react';
+import { WhatsAppIcon, InstagramIcon } from './SocialIcons';
 
 const ENROLL_URL = import.meta.env.VITE_LMS_ENROLL_URL || '#pricing';
 
@@ -52,20 +53,45 @@ export const FinalCTA: React.FC = () => {
           </div>
 
           {/* Contact Person Details */}
-          <div className="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-slate-700 font-medium">
-            <div className="flex items-center gap-2">
-              <User className="w-4 h-4 text-emerald-600" />
-              <span>Contact: <strong className="text-slate-900">Manideep Juvvala</strong></span>
+          <div className="pt-8 border-t border-slate-200 flex flex-col items-center justify-center gap-5 text-sm text-slate-700 font-medium">
+            <div className="flex flex-wrap items-center justify-center gap-6">
+              <div className="flex items-center gap-2">
+                <User className="w-4 h-4 text-emerald-600" />
+                <span>Contact: <strong className="text-slate-900">Manideep Juvvala</strong></span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-blue-600" />
+                <a href="tel:9381088104" className="hover:text-blue-600 transition-colors text-slate-900 font-bold">
+                  9381088104
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-orange-500" />
+                <span className="text-orange-600 font-bold">Start Your AI Journey Today</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-blue-600" />
-              <a href="tel:9381088104" className="hover:text-blue-600 transition-colors text-slate-900 font-bold">
-                9381088104
+
+            {/* Direct Social Connect Buttons */}
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="https://wa.me/919381088104?text=Hi%20Mani%2C%20I%20am%20interested%20in%20the%20AI%20Battlepass%20program!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-extrabold shadow-md shadow-emerald-600/20 transition-all hover:scale-105"
+              >
+                <WhatsAppIcon className="w-4 h-4 text-white" />
+                <span>Chat on WhatsApp (9381088104)</span>
               </a>
-            </div>
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-orange-500" />
-              <span className="text-orange-600 font-bold">Start Your AI Journey Today</span>
+
+              <a
+                href="https://www.instagram.com/manideeptechsolutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] hover:opacity-95 text-white text-xs sm:text-sm font-extrabold shadow-md shadow-pink-500/20 transition-all hover:scale-105"
+              >
+                <InstagramIcon className="w-4 h-4 text-white" />
+                <span>Follow on Instagram (@manideeptechsolutions)</span>
+              </a>
             </div>
           </div>
 
