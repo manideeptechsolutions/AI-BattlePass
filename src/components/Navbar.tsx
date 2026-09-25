@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight, Cpu } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ENROLL_URL = import.meta.env.VITE_LMS_ENROLL_URL || '#pricing';
@@ -42,25 +42,21 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo Section */}
           <a href="#hero" className="flex items-center gap-3 group">
-            <div className="relative h-10 w-auto flex items-center">
+            <div className="flex items-center gap-3">
               <img
-                src="/assets/mani-deeptech-logo.png"
+                src="/assets/Logo.jpeg"
                 alt="Mani DeepTech Solutions"
-                className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                className="h-10 w-10 rounded-xl object-cover border border-slate-200 shadow-sm transition-transform duration-300 group-hover:scale-105"
                 onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                  const sibling = e.currentTarget.nextElementSibling;
-                  if (sibling) sibling.classList.remove('hidden');
+                  e.currentTarget.src = '/assets/mani-deeptech-logo.png';
                 }}
               />
-              <div className="hidden flex items-center gap-2 text-slate-900 font-bold tracking-wider text-lg">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-emerald-500 via-blue-600 to-orange-500 p-0.5 flex items-center justify-center">
-                  <div className="w-full h-full bg-white rounded-[7px] flex items-center justify-center">
-                    <Cpu className="w-5 h-5 text-blue-600" />
-                  </div>
-                </div>
-                <span className="bg-gradient-to-r from-emerald-600 via-blue-600 to-orange-500 bg-clip-text text-transparent font-extrabold">
-                  Mani DeepTech Solutions
+              <div className="flex flex-col">
+                <span className="font-extrabold text-base tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors leading-tight">
+                  AI Battlepass
+                </span>
+                <span className="text-[10px] font-bold text-emerald-700 tracking-wider uppercase">
+                  by Mani DeepTech Solutions
                 </span>
               </div>
             </div>

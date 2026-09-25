@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, ArrowRight, ShieldCheck, Sparkles, Code2, Bot, Layers, Play, Award } from 'lucide-react';
+import { Terminal, ArrowRight, ShieldCheck, Code2, Bot, Layers, Play, Award } from 'lucide-react';
 
 const ENROLL_URL = import.meta.env.VITE_LMS_ENROLL_URL || '#pricing';
 
@@ -23,10 +23,18 @@ export const Hero: React.FC = () => {
             className="lg:col-span-7 space-y-6 text-center lg:text-left"
           >
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 backdrop-blur-md shadow-sm">
-              <Sparkles className="w-4 h-4 text-emerald-600 animate-pulse" />
-              <span className="text-xs sm:text-sm font-extrabold tracking-wider text-emerald-700 uppercase">
-                PROJECT-DRIVEN AI TRAINING
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm backdrop-blur-md">
+              <img
+                src="/assets/Logo.jpeg"
+                alt="Mani DeepTech Solutions"
+                className="w-5 h-5 rounded-md object-cover"
+              />
+              <span className="text-xs font-extrabold text-slate-800 tracking-wide">
+                Mani DeepTech Solutions
+              </span>
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              <span className="text-xs font-extrabold tracking-wider text-emerald-700 uppercase">
+                Project-Driven AI Training
               </span>
             </div>
 

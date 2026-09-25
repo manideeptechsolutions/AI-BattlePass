@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, User, Cpu } from 'lucide-react';
+import { Phone, User } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -12,18 +12,20 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-6 space-y-4">
             <div className="flex items-center gap-3">
               <img
-                src="/assets/mani-deeptech-logo.png"
+                src="/assets/Logo.jpeg"
                 alt="Mani DeepTech Solutions"
-                className="h-9 w-auto object-contain"
+                className="h-12 w-12 rounded-xl object-cover border border-slate-200 shadow-sm"
                 onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                  const sibling = e.currentTarget.nextElementSibling;
-                  if (sibling) sibling.classList.remove('hidden');
+                  e.currentTarget.src = '/assets/mani-deeptech-logo.png';
                 }}
               />
-              <div className="hidden flex items-center gap-2 text-slate-900 font-extrabold text-lg">
-                <Cpu className="w-5 h-5 text-blue-600" />
-                <span>Mani DeepTech Solutions</span>
+              <div>
+                <h3 className="font-extrabold text-lg text-slate-900 leading-tight">
+                  Mani DeepTech Solutions
+                </h3>
+                <p className="text-xs font-bold text-emerald-700 tracking-wider uppercase">
+                  AI Battlepass Program
+                </p>
               </div>
             </div>
 
@@ -32,7 +34,7 @@ export const Footer: React.FC = () => {
             </p>
 
             <p className="text-slate-600 text-xs leading-relaxed max-w-md font-medium">
-              AI Battlepass is an independent online training program empowering developers, students, working professionals, and AI enthusiasts to build real-world AI applications.
+              AI Battlepass is a comprehensive online training program by <strong>Mani DeepTech Solutions</strong> empowering developers, students, working professionals, and AI enthusiasts to build real-world AI applications.
             </p>
           </div>
 
