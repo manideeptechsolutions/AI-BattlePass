@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronRight, ChevronDown, CheckCircle2, Wrench, Sparkles, BookOpen } from 'lucide-react';
+import { ChevronRight, ChevronDown, CheckCircle2, Wrench, Sparkles, BookOpen, Lightbulb } from 'lucide-react';
 import { curriculumModules } from '../data/curriculumData';
 
 export const Curriculum: React.FC = () => {
@@ -19,7 +19,7 @@ export const Curriculum: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-extrabold text-emerald-700 tracking-wider uppercase shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-xs font-extrabold text-emerald-700 tracking-wider uppercase shadow-sm">
             <BookOpen className="w-3.5 h-3.5 text-emerald-600" />
             INTERACTIVE CURRICULUM
           </div>
@@ -91,7 +91,7 @@ export const Curriculum: React.FC = () => {
               >
                 {/* Header Badge & Number */}
                 <div className="flex items-center justify-between mb-6">
-                  <span className="text-xs font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700">
+                  <span className="text-xs font-extrabold uppercase tracking-wider px-3.5 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-700">
                     {activeModule.categoryBadge}
                   </span>
                   <span className="text-3xl font-extrabold text-slate-400">
@@ -146,8 +146,11 @@ export const Curriculum: React.FC = () => {
 
                 {/* Special Note for Capstone */}
                 {activeModule.id === 'module-09' && (
-                  <div className="mt-6 p-4 rounded-xl bg-orange-50 border border-orange-200 text-orange-900 text-xs leading-relaxed font-semibold">
-                    💡 <strong>Note:</strong> Students will be assigned a final capstone project by the trainers bringing together all relevant skills from Python to Agentic AI.
+                  <div className="mt-6 p-4 rounded-xl bg-orange-50 border border-orange-200 text-orange-900 text-xs leading-relaxed font-semibold flex items-start gap-2">
+                    <Lightbulb className="w-4 h-4 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong>Note:</strong> Students will be assigned a final capstone project by the trainers bringing together all relevant skills from Python to Agentic AI.
+                    </div>
                   </div>
                 )}
               </motion.div>

@@ -20,7 +20,7 @@ export const FinalCTA: React.FC = () => {
           className="bg-white rounded-3xl p-8 sm:p-14 text-center border-2 border-orange-400 shadow-2xl shadow-orange-500/10 relative overflow-hidden"
         >
           {/* Top Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-extrabold text-emerald-700 uppercase tracking-widest mb-6 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-xs font-extrabold text-emerald-700 uppercase tracking-widest mb-6 shadow-sm">
             <Sparkles className="w-4 h-4 text-emerald-600" />
             AI BATTLEPASS
           </div>

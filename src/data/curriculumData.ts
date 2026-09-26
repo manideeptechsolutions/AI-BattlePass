@@ -43,7 +43,7 @@ export const curriculumModules: CurriculumModule[] = [
     ],
     tools: ['Python', 'Pandas', 'Scikit-Learn'],
     categoryBadge: 'CORE ML',
-    accentColor: 'from-blue-500 to-indigo-500'
+    accentColor: 'from-blue-600 to-sky-600'
   },
   {
     id: 'module-03',
@@ -63,7 +63,7 @@ export const curriculumModules: CurriculumModule[] = [
     ],
     tools: ['Python', 'PyTorch Concepts', 'Deep Learning Workflows'],
     categoryBadge: 'NEURAL NETWORKS',
-    accentColor: 'from-indigo-500 to-purple-500'
+    accentColor: 'from-sky-600 to-emerald-600'
   },
   {
     id: 'module-04',
@@ -84,7 +84,7 @@ export const curriculumModules: CurriculumModule[] = [
     ],
     tools: ['Python', 'NLTK / SpaCy', 'Hugging Face Datasets'],
     categoryBadge: 'LANGUAGE AI',
-    accentColor: 'from-purple-500 to-pink-500'
+    accentColor: 'from-emerald-600 to-blue-600'
   },
   {
     id: 'module-05',
@@ -105,7 +105,7 @@ export const curriculumModules: CurriculumModule[] = [
     ],
     tools: ['OpenAI API', 'Hugging Face', 'Prompt Workflows'],
     categoryBadge: 'LLMs',
-    accentColor: 'from-pink-500 to-rose-500'
+    accentColor: 'from-blue-600 to-amber-600'
   },
   {
     id: 'module-06',

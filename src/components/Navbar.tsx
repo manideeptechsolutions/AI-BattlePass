@@ -104,10 +104,10 @@ export const Navbar: React.FC = () => {
               href={ENROLL_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative group overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+              className="relative group overflow-hidden rounded-2xl p-[2px] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-emerald-500 via-blue-600 to-orange-500 group-hover:opacity-90 transition-opacity" />
-              <span className="relative inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-orange-500 via-orange-600 to-amber-600 text-sm font-bold text-white transition-all shadow-md group-hover:shadow-orange-500/25">
+              <span className="relative inline-flex items-center gap-2 px-6 py-2.5 rounded-[14px] bg-gradient-to-r from-orange-500 via-orange-600 to-amber-600 text-sm font-bold text-white transition-all shadow-md group-hover:shadow-orange-500/25">
                 ENROLL NOW
                 <ArrowUpRight className="w-4 h-4 text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </span>
@@ -121,7 +121,7 @@ export const Navbar: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp 9381088104"
-              className="p-2 rounded-full bg-emerald-50 text-[#25D366] border border-emerald-200"
+              className="p-2 rounded-xl bg-emerald-50 text-[#25D366] border border-emerald-200"
             >
               <WhatsAppIcon className="w-4 h-4" />
             </a>
@@ -129,7 +129,7 @@ export const Navbar: React.FC = () => {
               href={ENROLL_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="sm:hidden inline-flex items-center gap-1 text-xs font-bold bg-orange-500 hover:bg-orange-600 text-white px-3 py-1.5 rounded-full transition-colors shadow-sm"
+              className="sm:hidden inline-flex items-center gap-1 text-xs font-bold bg-orange-500 hover:bg-orange-600 text-white px-3 py-1.5 rounded-xl transition-colors shadow-sm"
             >
               ENROLL
             </a>
@@ -196,7 +196,7 @@ export const Navbar: React.FC = () => {
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex items-center justify-center gap-2 w-full py-3 px-6 rounded-xl bg-gradient-to-r from-emerald-600 via-blue-600 to-orange-500 text-white font-extrabold text-center text-sm tracking-wide shadow-lg shadow-blue-500/20"
                 >
-                  ENROLL NOW — ₹1,200
+                  ENROLL NOW (₹1,200)
                   <ArrowUpRight className="w-4 h-4" />
                 </a>
               </div>

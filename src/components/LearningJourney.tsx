@@ -28,7 +28,7 @@ export const LearningJourney: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-extrabold text-blue-700 tracking-wider uppercase shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-blue-50 border border-blue-200 text-xs font-extrabold text-blue-700 tracking-wider uppercase shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-blue-600" />
             10-STAGE PROGRESSIVE ROADMAP
           </div>
@@ -36,7 +36,7 @@ export const LearningJourney: React.FC = () => {
             THE AI BATTLEPASS <span className="bg-gradient-to-r from-emerald-600 via-blue-600 to-orange-500 bg-clip-text text-transparent">LEARNING JOURNEY</span>
           </h2>
           <p className="text-slate-600 text-base sm:text-lg font-medium">
-            From Python foundations to building intelligent autonomous AI agents — step by step.
+            From Python foundations to building intelligent autonomous AI agents step by step.
           </p>
         </div>
 

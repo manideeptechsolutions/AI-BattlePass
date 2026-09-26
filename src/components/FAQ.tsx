@@ -19,7 +19,7 @@ export const FAQ: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-extrabold text-blue-700 tracking-wider uppercase shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-blue-50 border border-blue-200 text-xs font-extrabold text-blue-700 tracking-wider uppercase shadow-sm">
             <HelpCircle className="w-3.5 h-3.5 text-blue-600" />
             FREQUENTLY ASKED QUESTIONS
           </div>
@@ -37,7 +37,7 @@ export const FAQ: React.FC = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-full text-xs font-extrabold transition-all duration-300 ${
+              className={`px-4 py-2 rounded-lg text-xs font-extrabold transition-all duration-300 ${
                 activeCategory === cat
                   ? 'bg-gradient-to-r from-emerald-500 via-blue-600 to-orange-500 text-white shadow-md'
                   : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 shadow-sm'

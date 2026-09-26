@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Curriculum } from './components/Curriculum';
@@ -19,8 +19,45 @@ import { FAQ } from './components/FAQ';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { FloatingConnect } from './components/FloatingWhatsApp';
+import { PrivacyPolicy } from './components/PrivacyPolicy';
+import { TermsConditions } from './components/TermsConditions';
+
+type ViewMode = 'home' | 'privacy' | 'terms';
 
 export const App: React.FC = () => {
+  const [currentView, setCurrentView] = useState<ViewMode>('home');
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash === '#privacy') {
+        setCurrentView('privacy');
+        window.scrollTo(0, 0);
+      } else if (hash === '#terms') {
+        setCurrentView('terms');
+        window.scrollTo(0, 0);
+      } else if (hash === '' || hash === '#hero') {
+        setCurrentView('home');
+      }
+    };
+
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  const navigateTo = (view: ViewMode) => {
+    setCurrentView(view);
+    window.scrollTo(0, 0);
+    if (view === 'privacy') {
+      window.location.hash = 'privacy';
+    } else if (view === 'terms') {
+      window.location.hash = 'terms';
+    } else {
+      window.location.hash = '';
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-orange-500 selection:text-white relative">
       {/* Sticky Header Navbar */}
@@ -29,64 +66,77 @@ export const App: React.FC = () => {
       {/* Floating WhatsApp and Instagram Quick Connect */}
       <FloatingConnect />
 
-      {/* Main Page Flow Sections */}
+      {/* Main Content Area */}
       <main>
-        {/* 1. Hero Section (with course fee ₹1,200 displayed) */}
-        <Hero />
+        {currentView === 'privacy' && (
+          <PrivacyPolicy onBack={() => navigateTo('home')} />
+        )}
 
-        {/* 2. Interactive Curriculum (Immediately after Hero) */}
-        <Curriculum />
+        {currentView === 'terms' && (
+          <TermsConditions onBack={() => navigateTo('home')} />
+        )}
 
-        {/* 3. Who Is This For? */}
-        <AudienceSection />
+        {currentView === 'home' && (
+          <>
+            {/* 1. Hero Section */}
+            <Hero />
 
-        {/* 4. Project-Based Learning (7-step process) */}
-        <ProjectBasedLearning />
+            {/* 2. Interactive Curriculum */}
+            <Curriculum />
 
-        {/* 5. Live Online Training Mockup */}
-        <LiveTraining />
+            {/* 3. Who Is This For? */}
+            <AudienceSection />
 
-        {/* 6. Teaching Approach (50% Concepts / 50% Hands-on) */}
-        <TeachingApproach />
+            {/* 4. Project-Based Learning */}
+            <ProjectBasedLearning />
 
-        {/* 7. Modern AI Tools */}
-        <ToolsSection />
+            {/* 5. Live Online Training Mockup */}
+            <LiveTraining />
 
-        {/* 8. LMS Experience Learning Hub */}
-        <LMSSection />
+            {/* 6. Teaching Approach */}
+            <TeachingApproach />
 
-        {/* 9. Real-World Project Categories */}
-        <ProjectCategories />
+            {/* 7. Modern AI Tools */}
+            <ToolsSection />
 
-        {/* 10. Final Capstone Project */}
-        <CapstoneSection />
+            {/* 8. LMS Experience Learning Hub */}
+            <LMSSection />
 
-        {/* 11. Project Report Documentation */}
-        <ProjectReport />
+            {/* 9. Real-World Project Categories */}
+            <ProjectCategories />
 
-        {/* 12. Portfolio Building (GitHub, Portfolio, LinkedIn, Resume) */}
-        <PortfolioSection />
+            {/* 10. Final Capstone Project */}
+            <CapstoneSection />
 
-        {/* 13. Completion & Certification */}
-        <CompletionSection />
+            {/* 11. Project Report Documentation */}
+            <ProjectReport />
 
-        {/* 14. Course Format Metrics */}
-        <CourseFormat />
+            {/* 12. Portfolio Building */}
+            <PortfolioSection />
 
-        {/* 15. Standalone ₹1,200 Pricing Card */}
-        <Pricing />
+            {/* 13. Completion & Certification */}
+            <CompletionSection />
 
-        {/* 16. Interactive FAQ Accordion */}
-        <FAQ />
+            {/* 14. Course Format Metrics */}
+            <CourseFormat />
 
-        {/* 17. Final High-Impact CTA */}
-        <FinalCTA />
+            {/* 15. Standalone ₹1,200 Pricing Card */}
+            <Pricing />
+
+            {/* 16. Interactive FAQ Accordion */}
+            <FAQ />
+
+            {/* 17. Final High-Impact CTA */}
+            <FinalCTA />
+          </>
+        )}
       </main>
 
-      {/* 18. Footer */}
-      <Footer />
+      {/* Footer */}
+      <Footer onNavigate={(view) => navigateTo(view)} />
     </div>
   );
 };
 
 export default App;
+

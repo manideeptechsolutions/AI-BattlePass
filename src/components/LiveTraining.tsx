@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Video, Code, MessageSquare, HelpCircle, UserCheck, UploadCloud, Terminal, Circle } from 'lucide-react';
+import { Video, Code, MessageSquare, HelpCircle, UserCheck, UploadCloud, Terminal, Users, Folder, Circle } from 'lucide-react';
 
 const liveFeatures = [
   { title: 'Live Online Classes', desc: 'Interactive sessions 4 days per week', icon: Video, color: 'text-emerald-600 bg-emerald-50 border-emerald-200' },
@@ -20,7 +20,7 @@ export const LiveTraining: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-extrabold text-blue-700 tracking-wider uppercase shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-blue-50 border border-blue-200 text-xs font-extrabold text-blue-700 tracking-wider uppercase shadow-sm">
             LIVE ONLINE FORMAT
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -104,14 +104,17 @@ export const LiveTraining: React.FC = () => {
 
                   {/* Live Class Interactive Toolbar */}
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1 text-center">
-                    <div className="p-2 rounded bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-extrabold">
-                      👥 Live Attendees Connected
+                    <div className="p-2 rounded bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-extrabold flex items-center justify-center gap-1.5">
+                      <Users className="w-3.5 h-3.5 text-emerald-600" />
+                      <span>Live Attendees Connected</span>
                     </div>
-                    <div className="p-2 rounded bg-blue-50 border border-blue-200 text-blue-700 text-[10px] font-extrabold">
-                      💬 Q&A Chat Open
+                    <div className="p-2 rounded bg-blue-50 border border-blue-200 text-blue-700 text-[10px] font-extrabold flex items-center justify-center gap-1.5">
+                      <MessageSquare className="w-3.5 h-3.5 text-blue-600" />
+                      <span>Q&A Chat Open</span>
                     </div>
-                    <div className="p-2 rounded bg-orange-50 border border-orange-200 text-orange-700 text-[10px] font-extrabold">
-                      📁 LMS Project Code Shared
+                    <div className="p-2 rounded bg-orange-50 border border-orange-200 text-orange-700 text-[10px] font-extrabold flex items-center justify-center gap-1.5">
+                      <Folder className="w-3.5 h-3.5 text-orange-600" />
+                      <span>LMS Project Code Shared</span>
                     </div>
                   </div>
 

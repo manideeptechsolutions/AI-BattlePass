@@ -27,7 +27,7 @@ export const Pricing: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-extrabold text-emerald-700 tracking-wider uppercase shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-xs font-extrabold text-emerald-700 tracking-wider uppercase shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
             TRANSPARENT PRICING
           </div>
@@ -49,7 +49,7 @@ export const Pricing: React.FC = () => {
         >
           {/* Top Badge Header */}
           <div className="flex items-center justify-between mb-6">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-50 px-3.5 py-1.5 rounded-lg border border-emerald-200">
               AI BATTLEPASS
             </span>
             <span className="text-xs font-bold text-slate-500">
@@ -65,7 +65,7 @@ export const Pricing: React.FC = () => {
             <div className="text-base font-extrabold text-blue-700">
               3-Month Practical Online AI Training
             </div>
-            <div className="inline-flex items-center gap-1.5 text-xs text-slate-600 font-semibold bg-white px-3 py-1 rounded-full border border-slate-200 shadow-sm">
+            <div className="inline-flex items-center gap-1.5 text-xs text-slate-600 font-semibold bg-white px-3 py-1 rounded-lg border border-slate-200 shadow-sm">
               <CreditCard className="w-3.5 h-3.5 text-slate-500" />
               Full payment only
             </div>

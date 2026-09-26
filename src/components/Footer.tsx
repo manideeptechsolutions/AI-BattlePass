@@ -2,7 +2,11 @@ import React from 'react';
 import { Phone, User } from 'lucide-react';
 import { WhatsAppIcon, InstagramIcon } from './SocialIcons';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onNavigate?: (view: 'privacy' | 'terms') => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
     <footer className="bg-white border-t border-slate-200 pt-16 pb-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -72,6 +76,22 @@ export const Footer: React.FC = () => {
               <li><a href="#tools" className="hover:text-blue-600 transition-colors">Tools</a></li>
               <li><a href="#pricing" className="hover:text-blue-600 transition-colors">Pricing</a></li>
               <li><a href="#faq" className="hover:text-blue-600 transition-colors">FAQ</a></li>
+              <li>
+                <button
+                  onClick={() => onNavigate?.('privacy')}
+                  className="hover:text-blue-600 transition-colors text-left font-bold cursor-pointer"
+                >
+                  Privacy Policy
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate?.('terms')}
+                  className="hover:text-blue-600 transition-colors text-left font-bold cursor-pointer"
+                >
+                  Terms & Conditions
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -125,8 +145,20 @@ export const Footer: React.FC = () => {
           <div>
             © 2026 Mani DeepTech Solutions. All rights reserved.
           </div>
-          <div className="text-[11px] text-slate-600 font-bold">
-            AI Battlepass: Level Up From Python to Agentic AI
+          <div className="flex items-center gap-4 text-[11px]">
+            <button
+              onClick={() => onNavigate?.('privacy')}
+              className="text-slate-600 hover:text-blue-600 font-bold transition-colors cursor-pointer"
+            >
+              Privacy Policy
+            </button>
+            <span>•</span>
+            <button
+              onClick={() => onNavigate?.('terms')}
+              className="text-slate-600 hover:text-blue-600 font-bold transition-colors cursor-pointer"
+            >
+              Terms & Conditions
+            </button>
           </div>
         </div>
 
@@ -134,3 +166,4 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
+

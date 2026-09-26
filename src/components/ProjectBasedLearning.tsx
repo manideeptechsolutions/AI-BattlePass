@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, FileCheck, Code2, Upload, MessageSquare, RefreshCw, Trophy, ArrowRight } from 'lucide-react';
+import { BookOpen, FileCheck, Code2, Upload, MessageSquare, RefreshCw, Trophy, ArrowRight, Lightbulb, Pin } from 'lucide-react';
 
 const processSteps = [
   {
@@ -15,14 +15,14 @@ const processSteps = [
     title: 'GET ASSIGNED',
     desc: 'Receive a practical project or coding task directly from the trainer.',
     icon: FileCheck,
-    color: 'from-blue-500 to-indigo-600'
+    color: 'from-blue-500 to-teal-600'
   },
   {
     step: '03',
     title: 'BUILD',
     desc: 'Implement the project hands-on with trainer guidance.',
     icon: Code2,
-    color: 'from-indigo-600 to-purple-600'
+    color: 'from-teal-600 to-emerald-600'
   },
   {
     step: '04',
@@ -65,7 +65,7 @@ export const ProjectBasedLearning: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-extrabold text-emerald-700 tracking-wider uppercase shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-xs font-extrabold text-emerald-700 tracking-wider uppercase shadow-sm">
             PRACTICAL PEDAGOGY
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -76,13 +76,19 @@ export const ProjectBasedLearning: React.FC = () => {
           </p>
 
           {/* Clarification Callout Cards */}
-          <div className="mt-8 p-6 rounded-2xl bg-white border border-slate-200 space-y-3 text-left max-w-3xl mx-auto shadow-md">
-            <p className="text-slate-700 text-sm leading-relaxed font-medium">
-              💡 <strong className="text-slate-900">Trainer-Assigned Work:</strong> Throughout the program, trainers will assign required projects and practical tasks based on the topics being taught.
-            </p>
-            <p className="text-slate-700 text-sm leading-relaxed font-medium">
-              📌 <strong className="text-slate-900">LMS Workflow:</strong> Students are expected to complete the assigned projects and submit their work through the LMS platform for feedback.
-            </p>
+          <div className="mt-8 p-6 rounded-2xl bg-white border border-slate-200 space-y-4 text-left max-w-3xl mx-auto shadow-md">
+            <div className="flex items-start gap-3 text-slate-700 text-sm leading-relaxed font-medium">
+              <Lightbulb className="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong className="text-slate-900">Trainer-Assigned Work:</strong> Throughout the program, trainers will assign required projects and practical tasks based on the topics being taught.
+              </div>
+            </div>
+            <div className="flex items-start gap-3 text-slate-700 text-sm leading-relaxed font-medium">
+              <Pin className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong className="text-slate-900">LMS Workflow:</strong> Students are expected to complete the assigned projects and submit their work through the LMS platform for feedback.
+              </div>
+            </div>
           </div>
         </div>
 

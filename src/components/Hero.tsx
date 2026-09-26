@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, ArrowRight, ShieldCheck, Code2, Bot, Layers, Play, Award } from 'lucide-react';
+import { Terminal, ArrowRight, ShieldCheck, Code2, Bot, Layers, Play, Award, Zap, CheckCircle2 } from 'lucide-react';
 
 const ENROLL_URL = import.meta.env.VITE_LMS_ENROLL_URL || 'https://forms.gle/5Ax5qbXBpUDozCRN7';
 
@@ -17,13 +17,13 @@ export const Hero: React.FC = () => {
           
           {/* Left Text Column */}
           <motion.div
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.4 }}
             className="lg:col-span-7 space-y-6 text-center lg:text-left"
           >
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm backdrop-blur-md">
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 shadow-sm backdrop-blur-md">
               <img
                 src="/assets/Logo.jpeg"
                 alt="Mani DeepTech Solutions"
@@ -53,13 +53,14 @@ export const Hero: React.FC = () => {
               <div className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-5 py-2.5 rounded-2xl bg-gradient-to-r from-emerald-50 via-blue-50 to-orange-50 border-2 border-emerald-300 shadow-md">
                 <span className="text-xs font-black text-slate-700 uppercase tracking-wider">Course Fee:</span>
                 <span className="text-2xl sm:text-3xl font-black bg-gradient-to-r from-emerald-600 via-blue-600 to-orange-600 bg-clip-text text-transparent">₹1,200</span>
-                <span className="text-[11px] sm:text-xs font-extrabold text-emerald-800 bg-emerald-100 border border-emerald-300 px-2.5 py-0.5 rounded-full uppercase tracking-wide">
+                <span className="text-[11px] sm:text-xs font-extrabold text-emerald-800 bg-emerald-100 border border-emerald-300 px-2.5 py-0.5 rounded-lg uppercase tracking-wide">
                   Full 3-Month Access
                 </span>
               </div>
 
-              <div className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2.5 rounded-2xl bg-orange-50 border border-orange-200 text-orange-800 text-xs sm:text-sm font-bold tracking-wide shadow-sm">
-                ⚡ 3-MONTH PRACTICAL ONLINE TRAINING
+              <div className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-2xl bg-orange-50 border border-orange-200 text-orange-800 text-xs sm:text-sm font-bold tracking-wide shadow-sm">
+                <Zap className="w-4 h-4 text-orange-600" />
+                <span>3-MONTH PRACTICAL ONLINE TRAINING</span>
               </div>
             </div>
 
@@ -76,7 +77,7 @@ export const Hero: React.FC = () => {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-600 via-blue-600 to-orange-500 hover:from-emerald-500 hover:to-orange-600 text-white font-extrabold text-base tracking-wider shadow-lg shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-0.5"
               >
-                ENROLL NOW — ₹1,200
+                ENROLL NOW (₹1,200)
                 <ArrowRight className="w-5 h-5" />
               </a>
 
@@ -112,9 +113,9 @@ export const Hero: React.FC = () => {
 
           {/* Right Visual Column */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.92 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="lg:col-span-5 relative"
           >
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-2xl shadow-blue-900/10 group">
@@ -129,9 +130,7 @@ export const Hero: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent" />
                 
                 {/* Floating UI Overlay Card 1: Active Terminal */}
-                <motion.div
-                  animate={{ y: [0, -6, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                <div
                   className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-white/95 backdrop-blur-md border border-emerald-300 p-2 sm:p-3 rounded-xl shadow-xl flex items-center gap-2 sm:gap-3 max-w-[200px] sm:max-w-none"
                 >
                   <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-emerald-100 flex items-center justify-center flex-shrink-0">
@@ -141,12 +140,10 @@ export const Hero: React.FC = () => {
                     <div className="text-[9px] sm:text-[10px] uppercase font-bold text-emerald-700 tracking-wider">AGENTIC LOOP</div>
                     <div className="text-[10px] sm:text-xs font-mono font-semibold text-slate-800 truncate">agent_tools.py...</div>
                   </div>
-                </motion.div>
+                </div>
 
                 {/* Floating UI Overlay Card 2: Capstone Progress */}
-                <motion.div
-                  animate={{ y: [0, 6, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+                <div
                   className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 bg-white/95 backdrop-blur-md border border-orange-300 p-2 sm:p-3 rounded-xl shadow-xl flex items-center gap-2 sm:gap-3 max-w-[200px] sm:max-w-none"
                 >
                   <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-orange-100 flex items-center justify-center flex-shrink-0">
@@ -154,22 +151,25 @@ export const Hero: React.FC = () => {
                   </div>
                   <div className="truncate">
                     <div className="text-[9px] sm:text-[10px] uppercase font-bold text-orange-600 tracking-wider">PROJECT PROGRESS</div>
-                    <div className="text-[10px] sm:text-xs font-bold text-slate-900 truncate">RAG Pipeline Verified ✓</div>
+                    <div className="text-[10px] sm:text-xs font-bold text-slate-900 truncate flex items-center gap-1">
+                      <span>RAG Pipeline Verified</span>
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 inline" />
+                    </div>
                   </div>
-                </motion.div>
+                </div>
               </div>
 
               {/* Bottom Card Control Panel */}
               <div className="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="flex -space-x-2">
-                    <div className="w-7 h-7 rounded-full bg-emerald-500 flex items-center justify-center text-[10px] font-bold text-white shadow-sm">PY</div>
-                    <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-[10px] font-bold text-white shadow-sm">ML</div>
-                    <div className="w-7 h-7 rounded-full bg-orange-500 flex items-center justify-center text-[10px] font-bold text-white shadow-sm">AI</div>
+                    <div className="w-7 h-7 rounded-lg bg-emerald-500 flex items-center justify-center text-[10px] font-bold text-white shadow-sm">PY</div>
+                    <div className="w-7 h-7 rounded-lg bg-blue-600 flex items-center justify-center text-[10px] font-bold text-white shadow-sm">ML</div>
+                    <div className="w-7 h-7 rounded-lg bg-orange-500 flex items-center justify-center text-[10px] font-bold text-white shadow-sm">AI</div>
                   </div>
                   <span className="text-xs font-bold text-slate-600">10 Progressive Stages</span>
                 </div>
-                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-lg border border-blue-200">
                   <Play className="w-3 h-3 fill-blue-600 text-blue-600" /> Live Interactive
                 </div>
               </div>
