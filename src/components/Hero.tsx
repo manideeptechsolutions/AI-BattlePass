@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Terminal, ArrowRight, ShieldCheck, Code2, Bot, Layers, Play, Award } from 'lucide-react';
 
-const ENROLL_URL = import.meta.env.VITE_LMS_ENROLL_URL || '#pricing';
+const ENROLL_URL = import.meta.env.VITE_LMS_ENROLL_URL || 'https://forms.gle/5Ax5qbXBpUDozCRN7';
 
 export const Hero: React.FC = () => {
   return (
@@ -72,6 +72,8 @@ export const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <a
                 href={ENROLL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-600 via-blue-600 to-orange-500 hover:from-emerald-500 hover:to-orange-600 text-white font-extrabold text-base tracking-wider shadow-lg shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-0.5"
               >
                 ENROLL NOW — ₹1,200

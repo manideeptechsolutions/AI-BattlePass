@@ -3,7 +3,7 @@ import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { WhatsAppIcon, InstagramIcon } from './SocialIcons';
 
-const ENROLL_URL = import.meta.env.VITE_LMS_ENROLL_URL || '#pricing';
+const ENROLL_URL = import.meta.env.VITE_LMS_ENROLL_URL || 'https://forms.gle/5Ax5qbXBpUDozCRN7';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -102,6 +102,8 @@ export const Navbar: React.FC = () => {
 
             <a
               href={ENROLL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative group overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-emerald-500 via-blue-600 to-orange-500 group-hover:opacity-90 transition-opacity" />
@@ -125,6 +127,8 @@ export const Navbar: React.FC = () => {
             </a>
             <a
               href={ENROLL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="sm:hidden inline-flex items-center gap-1 text-xs font-bold bg-orange-500 hover:bg-orange-600 text-white px-3 py-1.5 rounded-full transition-colors shadow-sm"
             >
               ENROLL
@@ -187,6 +191,8 @@ export const Navbar: React.FC = () => {
               <div className="pt-1">
                 <a
                   href={ENROLL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex items-center justify-center gap-2 w-full py-3 px-6 rounded-xl bg-gradient-to-r from-emerald-600 via-blue-600 to-orange-500 text-white font-extrabold text-center text-sm tracking-wide shadow-lg shadow-blue-500/20"
                 >

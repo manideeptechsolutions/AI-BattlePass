@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, ArrowRight, ShieldCheck, Sparkles, CreditCard } from 'lucide-react';
 
-const ENROLL_URL = import.meta.env.VITE_LMS_ENROLL_URL || '#pricing';
+const ENROLL_URL = import.meta.env.VITE_LMS_ENROLL_URL || 'https://forms.gle/5Ax5qbXBpUDozCRN7';
 
 const pricingIncludes = [
   'Live Online Classes (4 Days/Week)',
@@ -88,6 +88,8 @@ export const Pricing: React.FC = () => {
           <div className="pt-2">
             <a
               href={ENROLL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full inline-flex items-center justify-center gap-3 py-4 px-8 rounded-2xl bg-gradient-to-r from-orange-500 via-amber-600 to-orange-600 hover:from-orange-600 hover:to-amber-700 text-white font-extrabold text-lg tracking-wider shadow-xl shadow-orange-500/25 transition-all transform hover:-translate-y-0.5"
             >
               ENROLL NOW

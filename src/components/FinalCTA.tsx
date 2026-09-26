@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight, Phone, User, Sparkles, ShieldCheck } from 'lucide-react';
 import { WhatsAppIcon, InstagramIcon } from './SocialIcons';
 
-const ENROLL_URL = import.meta.env.VITE_LMS_ENROLL_URL || '#pricing';
+const ENROLL_URL = import.meta.env.VITE_LMS_ENROLL_URL || 'https://forms.gle/5Ax5qbXBpUDozCRN7';
 
 export const FinalCTA: React.FC = () => {
   return (
@@ -45,6 +45,8 @@ export const FinalCTA: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a
               href={ENROLL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-4 rounded-2xl bg-gradient-to-r from-orange-500 via-amber-600 to-orange-600 hover:from-orange-600 hover:to-amber-700 text-white font-extrabold text-lg tracking-wider shadow-xl shadow-orange-500/25 transition-transform transform hover:-translate-y-0.5"
             >
               ENROLL NOW
